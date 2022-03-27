@@ -1,0 +1,127 @@
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-left {
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    top: 60px;
+    border-right: solid 1px rgb(228, 228, 228);
+}
+
+.main-right {
+    margin-left: 250px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.navbar-top {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    border-bottom: solid 1px rgb(228, 228, 228);
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    width: 50%;
+}
+
+.header-right {
+    width: 50%;
+}
+
+.header-right > ul {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 !important;
+}
+
+.header-right > ul > li {
+    display: block;
+}
+
+.header-links > li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.img-list-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-viewer-modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.image-viewer-modal-content {
+    margin: auto;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-viewer-modal-header {
+    margin-top: 25px;
+    height: 25px;
+    color: rgba(255, 255, 255, 0.838);
+}
+
+.image-viewer-modal-footer > label {
+    display: block;
+}
+
+.thumbnail-container {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail-tooltip {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.838);
+}
+
+.thumbnail-tooltip > span {
+    display: block;
+}
+
+.thumbnail-container:hover > .thumbnail-tooltip {
+    height: 25px;
+}
+
+.thumbnail-container::after {
+    box-shadow: 7px 7px 2px 1px rgba(0, 96, 11, 0.2);
+    width: 300px;
+    height: 300px;
+    /*opacity: 0;*/
+    display: block;
+}
