@@ -9,17 +9,17 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
     props: {
-        objectKey: String
+        objectKey: String,
     },
     data() {
         return {
-            objectData: null,
-            timestamp: null
+            objectData: '',
+            timestamp: ''
         }
     },
     methods: {
         async getObjectData() {
-            let getObjRes = await ImageService.getObject(this.objectKey, true);
+            let getObjRes = await ImageService.getObject(this.objectKey as string, true);
 
             if(getObjRes && getObjRes.payload) {
                 this.objectData = ImageUtil.getCssUrlFromBase64Data(getObjRes.payload.mimetype, getObjRes.payload.data);

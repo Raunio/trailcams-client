@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { ObjectDTO } from 'src/dto/images/object.dto';
-import { TrailApiResponse } from 'src/dto/trail.api.response';
+import { ObjectDTO } from '../dto/images/object.dto';
+import { TrailApiResponse } from '../dto/trail.api.response';
 import { Routes } from '../router/routes';
 
 export class ImageService {

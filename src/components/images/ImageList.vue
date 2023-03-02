@@ -7,6 +7,7 @@ import ImageViewer from './ImageViewer.vue';
 import { ImageService } from '../../services/image.service';
 import { defineComponent } from 'vue';
 import { ImageUtil } from '../../util/ImageUtil';
+import { ObjectDTO } from '../../dto/images/object.dto';
 
 export default defineComponent({
     props: {
@@ -14,8 +15,8 @@ export default defineComponent({
     },
     data() {
         return {
-            objects: [],
-            previewImage: null,
+            objects: [] as ObjectDTO[],
+            previewImage: '',
             showModal: false,
         }
     },
@@ -32,7 +33,7 @@ export default defineComponent({
                 return ImageUtil.getCssUrlFromBase64Data(getObjRes.payload.mimetype, getObjRes.payload.data);
             }
         },
-        preview(key) {
+        preview(key: string) {
             this.previewImage = key;
             this.showModal = true;
         }

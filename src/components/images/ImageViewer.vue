@@ -14,9 +14,9 @@ export default defineComponent({
     },
     data() {
         return {
-            data: null,
+            data: '',
             metadata: {
-                timestamp: null
+                timestamp: ''
             }
         }
     },
@@ -24,7 +24,7 @@ export default defineComponent({
 
     },
     async created() {
-        let getObjRes = await ImageService.getObject(this.objectKey);
+        let getObjRes = await ImageService.getObject(this.objectKey as string);
         if(getObjRes.payload) {
             this.data = ImageUtil.getCssUrlFromBase64Data(getObjRes.payload.mimetype, getObjRes.payload.data);
 

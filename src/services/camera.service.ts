@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { CameraDTO } from 'src/dto/cameras/camera.dto';
-import { TrailApiResponse } from 'src/dto/trail.api.response';
+import { CameraDTO } from '../dto/cameras/camera.dto';
+import { TrailApiResponse } from '../dto/trail.api.response';
 import { Routes } from '../router/routes';
 
 export class CameraService {

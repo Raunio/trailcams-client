@@ -1,7 +1,7 @@
-import Vuex from 'vuex';
+import Vuex, { Store } from 'vuex';
 import { StoreState } from './store.state';
 export class StoreFactory {
-    private static store;
+    private static store: Store<StoreState>;
     private constructor() {}
 
     static getStore() {

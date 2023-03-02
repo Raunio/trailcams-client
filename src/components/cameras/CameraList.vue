@@ -10,7 +10,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     data() {
         return {
-            cameras: null
+            cameras: [] as CameraDTO[]
         }
     },
     async created() {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ImageList from '../components/images/ImageList.vue';
-import { CameraService } from '../../services/camera.service';
+import { CameraService } from '../services/camera.service';
 </script>
 
 <script lang="ts">
@@ -8,18 +8,21 @@ import { CameraService } from '../../services/camera.service';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
+    props: {
+        name: String
+    },
     data() {
         return {
-            name: undefined,
+            name: '' as string,
         }
     },
     watch: {
         $route(to, from) {
-            this.name = to.params.name;
+            this.name = to.params.name as string;
         }
     },
     mounted() {
-        this.name = this.$route.params.name;
+        this.name = this.$route.params.name as string;
     }
 });
 </script>

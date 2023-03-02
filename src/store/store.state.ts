@@ -1,4 +1,4 @@
 export class StoreState {
-    username: string;
-    token: string;
+    username: string | undefined;
+    token: string | undefined;
 }

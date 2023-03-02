@@ -1,3 +1,3 @@
 export interface Interceptor {
-    use();
+    use(): void;
 }
